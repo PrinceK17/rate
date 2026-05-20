@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prince Kelvin — Rate Card</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f9f7f4;
+    color: #1a1a1a;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+  }
+
+  .rc-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 0.5px solid #e0ddd8;
+  }
+
+  .rc-header { margin-bottom: 2rem; }
+  .rc-name { font-size: 22px; font-weight: 500; color: #1a1a1a; margin-bottom: 4px; }
+  .rc-sub { font-size: 14px; color: #888; }
+
+  hr.rc-divider {
+    border: none;
+    border-top: 0.5px solid #e0ddd8;
+    margin: 1.75rem 0;
+  }
+
+  .rc-section-label {
+    font-size: 11px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .rc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 1.5rem;
+  }
+
+  .rc-card {
+    background: #ffffff;
+    border: 0.5px solid #e0ddd8;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+  }
+
+  .rc-card-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+
+  .rc-card-desc {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .rc-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .rc-price-ngn {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a;
+  }
+
+  .rc-price-usd {
+    font-size: 12px;
+    color: #aaa;
+  }
+
+  .rc-badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+
+  .rc-badge-project {
+    background: #e8f0fb;
+    color: #1a56a0;
+  }
+
+  .rc-retainer-card {
+    background: #f9f7f4;
+    border: 0.5px solid #e0ddd8;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 12px;
+  }
+
+  .rc-retainer-card.rc-popular {
+    border: 2px solid #378add;
+    background: #ffffff;
+  }
+
+  .rc-popular-badge {
+    font-size: 11px;
+    background: #e6f1fb;
+    color: #185fa5;
+    padding: 2px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .rc-retainer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .rc-retainer-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+  }
+
+  .rc-retainer-price {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-align: right;
+  }
+
+  .rc-retainer-usd {
+    font-size: 11px;
+    color: #aaa;
+    text-align: right;
+  }
+
+  .rc-retainer-includes {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.7;
+  }
+
+  .rc-note {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.7;
+    padding: 1rem 1.25rem;
+    background: #f9f7f4;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+
+  .rc-note strong {
+    color: #555;
+    font-weight: 500;
+  }
+
+  @media (max-width: 520px) {
+    .rc-wrap { padding: 1.5rem 1rem; }
+    .rc-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 380px) {
+    .rc-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="rc-wrap">
+
+  <div class="rc-header">
+    <p class="rc-name">Prince Kelvin — writing services</p>
+    <p class="rc-sub">Ghostwriting for founders and brands &middot; Project and retainer pricing</p>
+  </div>
+
+  <p class="rc-section-label">Project pricing</p>
+
+  <div class="rc-grid">
+
+    <div class="rc-card">
+      <p class="rc-card-title">Founder LinkedIn post</p>
+      <p class="rc-card-desc">Single thought leadership post written in your voice</p>
+      <div class="rc-price-row">
+        <span class="rc-price-ngn">&#8358;25,000</span>
+        <span class="rc-price-usd">~ $16</span>
+      </div>
+      <span class="rc-badge rc-badge-project">per post</span>
+    </div>
+
+    <div class="rc-card">
+      <p class="rc-card-title">LinkedIn post series</p>
+      <p class="rc-card-desc">3 posts with a consistent voice and content arc</p>
+      <div class="rc-price-row">
+        <span class="rc-price-ngn">&#8358;65,000</span>
+        <span class="rc-price-usd">~ $42</span>
+      </div>
+      <span class="rc-badge rc-badge-project">per series</span>
+    </div>
+
+    <div class="rc-card">
+      <p class="rc-card-title">Newsletter edition</p>
+      <p class="rc-card-desc">One full newsletter or Substack edition, 400&ndash;600 words</p>
+      <div class="rc-price-row">
+        <span class="rc-price-ngn">&#8358;35,000</span>
+        <span class="rc-price-usd">~ $22</span>
+      </div>
+      <span class="rc-badge rc-badge-project">per edition</span>
+    </div>
+
+    <div class="rc-card">
+      <p class="rc-card-title">Email sequence</p>
+      <p class="rc-card-desc">3-email campaign, welcome, nurture, or sales</p>
+      <div class="rc-price-row">
+        <span class="rc-price-ngn">&#8358;80,000</span>
+        <span class="rc-price-usd">~ $51</span>
+      </div>
+      <span class="rc-badge rc-badge-project">per sequence</span>
+    </div>
+
+    <div class="rc-card">
+      <p class="rc-card-title">Brand story</p>
+      <p class="rc-card-desc">Origin or about narrative for website or press kit</p>
+      <div class="rc-price-row">
+        <span class="rc-price-ngn">&#8358;55,000</span>
+        <span class="rc-price-usd">~ $35</span>
+      </div>
+      <span class="rc-badge rc-badge-project">per piece</span>
+    </div>
+
+    <div class="rc-card">
+      <p class="rc-card-title">Sales page</p>
+      <p class="rc-card-desc">Full long-form sales copy for a digital product or offer</p>
+      <div class="rc-price-row">
+        <span class="rc-price-ngn">&#8358;120,000</span>
+        <span class="rc-price-usd">~ $76</span>
+      </div>
+      <span class="rc-badge rc-badge-project">per page</span>
+    </div>
+
+    <div class="rc-card">
+      <p class="rc-card-title">Long-form article</p>
+      <p class="rc-card-desc">800&ndash;1,200 word thought leadership or editorial piece</p>
+      <div class="rc-price-row">
+        <span class="rc-price-ngn">&#8358;45,000</span>
+        <span class="rc-price-usd">~ $29</span>
+      </div>
+      <span class="rc-badge rc-badge-project">per article</span>
+    </div>
+
+    <div class="rc-card">
+      <p class="rc-card-title">LinkedIn About</p>
+      <p class="rc-card-desc">Ghostwritten profile section, 200&ndash;230 words</p>
+      <div class="rc-price-row">
+        <span class="rc-price-ngn">&#8358;30,000</span>
+        <span class="rc-price-usd">~ $19</span>
+      </div>
+      <span class="rc-badge rc-badge-project">per piece</span>
+    </div>
+
+  </div>
+
+  <hr class="rc-divider" />
+
+  <p class="rc-section-label">Monthly retainers</p>
+
+  <div class="rc-retainer-card">
+    <div class="rc-retainer-header">
+      <p class="rc-retainer-name">Starter</p>
+      <div>
+        <p class="rc-retainer-price">&#8358;150,000</p>
+        <p class="rc-retainer-usd">~ $95 / month</p>
+      </div>
+    </div>
+    <p class="rc-retainer-includes">4 LinkedIn posts &middot; 1 newsletter edition &middot; 1 revision round per piece</p>
+  </div>
+
+  <div class="rc-retainer-card rc-popular">
+    <span class="rc-popular-badge">most popular</span>
+    <div class="rc-retainer-header">
+      <p class="rc-retainer-name">Growth</p>
+      <div>
+        <p class="rc-retainer-price">&#8358;280,000</p>
+        <p class="rc-retainer-usd">~ $178 / month</p>
+      </div>
+    </div>
+    <p class="rc-retainer-includes">8 LinkedIn posts &middot; 2 newsletter editions &middot; 1 email sequence &middot; 2 revision rounds per piece</p>
+  </div>
+
+  <div class="rc-retainer-card">
+    <div class="rc-retainer-header">
+      <p class="rc-retainer-name">Full voice</p>
+      <div>
+        <p class="rc-retainer-price">&#8358;450,000</p>
+        <p class="rc-retainer-usd">~ $285 / month</p>
+      </div>
+    </div>
+    <p class="rc-retainer-includes">12 LinkedIn posts &middot; 4 newsletter editions &middot; 1 email sequence &middot; brand story or sales page &middot; unlimited revisions</p>
+  </div>
+
+  <div class="rc-note">
+    <strong>A few things to know:</strong> All prices are starting rates. Complex briefs, rush delivery (under 48 hrs), or international clients billed in USD are quoted separately. A 50% deposit is required before work begins on any project. Retainers are billed monthly with a minimum two-month commitment.
+  </div>
+
+</div>
+
+</body>
+</html>
